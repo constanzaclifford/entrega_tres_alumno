@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()">
+        regresar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crear Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="Usuario..." 
+        label="Ingrese nombre:" 
+        labelPlacement="floating" 
+        name="usuario" 
+        [(ngModel)]="usuario.usuario">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="password" 
+        placeholder="Password..." 
+        label="Ingrese password:" 
+        labelPlacement="floating" 
+        name="password" 
+        [(ngModel)]="usuario.password">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="password" 
+        placeholder="Repetir password..." 
+        label="Repetir password:" 
+        labelPlacement="floating" 
+        name="repeatPassword" 
+        [(ngModel)]="repeatPassword">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="Email..." 
+        label="Ingrese su email:" 
+        labelPlacement="floating" 
+        name="email" 
+        [(ngModel)]="usuario.email">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="Celular..." 
+        label="Ingrese su telefono:" 
+        labelPlacement="floating" 
+        name="celular" 
+        [(ngModel)]="usuario.cel">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="RUT..." 
+        label="Ingrese su RUT:" 
+        labelPlacement="floating" 
+        name="rut" 
+        [(ngModel)]="usuario.rut">
+      </ion-input>
+    </ion-item>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <ion-button (click)="crearUser()" shape="round" color="primary">
+        Crear Usuario
+      </ion-button>  
+    </div>
+  </form>
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inglés sección 043V</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio/clases" text="" color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>
+      <h1>Clase de ingles</h1>
+      <p>Sección: 043V</p>
+      <p>Fecha: 01/09/2024 - Hora:10:00 AM - 11:00AM</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-label>
+        <h2>Jose Espinoza</h2>
+        <p id="naranjo">Asistió: Por validar</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h2>Constanza Olivares</h2>
+        <p id="rojo">Asistió: ausente</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h2>Ignacio León</h2>
+        <p id="azul">Asistió: presente</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-card>
+
+ 
+   <!-- Contenedor para el campo de texto y el botón -->
+   <div class="scan-container">
+    <ion-item class="scan-item">
+      <ion-input placeholder="Escanear QR aquí"></ion-input> <ion-button (click)="escanear()" class="scan-button">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    
+  </div>
+
+  <!-- Botón para cerrar asistencia -->
+  <ion-button (click)="cerrarAsistencia()" expand="full" fill="solid">
+    Cerrar asistencia
+  </ion-button>
+  
+  <ion-card class="material-card">
+    <img src="assets/Clase_ingles.png" alt="Material Inglés" />
+    <ion-card-header>
+      <ion-card-title>Material Inglés</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Tarjeta de Material Física -->
+  <ion-card class="material-card">
+    <img src="assets/clase_mate.png" alt="Material Matemáticas" />
+    <ion-card-header>
+      <ion-card-title>Material Matemáticas</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

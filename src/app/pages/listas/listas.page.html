@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista de Estudiantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Burbujas de fondo -->
+  <div class="circles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <!-- Lista de estudiantes -->
+  <ion-list>
+    <!-- Asegúrate de que 'listas' no esté vacío y de que 'nombre' y 'asistencia' existan en los datos -->
+    <ion-item *ngFor="let estudiante of listas">
+      <ion-label>
+        {{ estudiante.nombre }} - 
+        <strong>{{ estudiante.asistencia ? 'Asistió' : 'No Asistió' }}</strong>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,269 @@
+ion-content {
+  background-color: #ffffff; /* Color de fondo base */
+  position: relative;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(115, 96, 223, 0.2); 
+  animation: float 10s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 15%;
+}
+
+.circle:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 80%;
+}
+
+.circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 70%;
+  left: 30%;
+}
+
+.circle:nth-child(4) {
+  width: 250px;
+  height: 250px;
+  top: 20%;
+  left: 60%;
+}
+
+.circle:nth-child(5) {
+  width: 100px;
+  height: 100px;
+  top: 80%;
+  left: 20%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-50px) translateX(50px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+ion-header {
+  --ion-background-color: #7360df; 
+}
+
+ion-toolbar {
+  --background: #7360df; 
+  color: #ffffff;
+  backdrop-filter: none; 
+  opacity: 1; 
+}
+
+ion-title {
+  color: #ffffff;
+}
+
+.center-text {
+  text-align: center;
+}
+
+ion-card-title {
+  color: #7360df;
+}
+
+ion-label {
+  color: #7360df; 
+  margin-bottom: 15px;
+}
+
+ion-list-header ion-label {
+  color: #7360df; /* Cambia el color a #7360df */
+}
+
+ion-label h2 {
+  color: #7360df; /* Cambia el color a #7360df */
+}
+
+.boton-outline-custom {
+  --border-color: #7360df; 
+  --color: #7360df; 
+  --border-radius: 15px; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Añade la transición */
+  margin: 0 5px; 
+}
+
+.boton-outline-custom.ion-activated {
+  --background: #7360df; 
+  --color: #ffffff; 
+  --border-color: #7360df; 
+}
+
+.boton-outline-custom:hover {
+  --background: #7360df;
+  --color: #ffffff; 
+  --border-color: #7360df; 
+  box-shadow: 0px 6px 12px rgba(115, 96, 223, 0.4); /* Sombra más fuerte al pasar el mouse */
+}
+
+ion-button.boton-outline-custom {
+  --border-radius: 10px;
+  --background: none;
+  --border-color: #7360df;
+  --color: #7360df;
+  --padding: 8px 16px;
+  font-size: 14px;
+  box-shadow: 0px 4px 8px rgba(115, 96, 223, 0.3); /* Sombra suave */
+}
+
+ion-item {
+  --background: #f7f7f7; /* Fondo gris claro */
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+ion-label h2 {
+  color: #7360df; /* Color morado para los títulos */
+}
+
+ion-label p {
+  color: #707070; /* Texto suave para las fechas */
+}
+
+.welcome-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  text-align: center;
+}
+
+.welcome-section h2 {
+  color: #7360df;
+  font-size: 24px;
+}
+
+.welcome-section p {
+  color: #707070;
+  margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ion-item, ion-button.boton-outline-custom, .welcome-section {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+ion-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+.swiper-slide {
+  position: relative; /* Importante para el overlay */
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(115, 96, 223, 0.2); /* Color de los círculos */
+  z-index: 1; /* Capa superior para el overlay */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Para que las imágenes se ajusten bien */
+  display: block;
+  z-index: 0; /* Imágenes detrás del overlay */
+}
+
+.swiper-slide .carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  z-index: 2; /* Texto encima del overlay */
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo sutil detrás del texto */
+  border-radius: 10px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #7360df; /* Color morado del diseño */
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ffffff; /* Cambia a blanco cuando pases el mouse por encima */
+}
+.swiper-container {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del carrusel */
+  border-radius: 15px; /* Bordes redondeados para suavizar la apariencia */
+}
+
+.swiper-slide {
+  transition: transform 0.5s ease; /* Animación al cambiar de imagen */
+}
+.swiper-slide .bottom-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(115, 96, 223, 0.8); /* Mismo morado pero más oscuro */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  z-index: 2;
+}

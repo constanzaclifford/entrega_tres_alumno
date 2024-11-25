@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()">
+        Volver
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="circles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let clase of clases" (click)="buscarClase(clase)">
+      <ion-icon name="book-outline" slot="start" style="color: #7360df;"></ion-icon>
+      <ion-label>
+        <h2>Nombre: {{clase.nombre}}</h2>
+        <p>Descripción: {{clase.descripcion}}</p>
+        <p>Asignatura: {{clase.asignatura}}</p>
+        <p>Horario: {{clase.horario.dia}} a las {{clase.horario.horaInicio}}</p>
+        <p>Profesor: {{clase.profesor}}</p>
+        <img *ngIf="clase.imagen" [src]="clase.imagen" alt="{{clase.nombre}}" class="clase-img" />
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

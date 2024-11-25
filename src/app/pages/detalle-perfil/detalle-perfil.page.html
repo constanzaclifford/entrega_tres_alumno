@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()">Regresar</ion-button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form *ngIf="usuario" (ngSubmit)="guardarCambios()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input [(ngModel)]="usuario.usuario" name="usuario" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Correo</ion-label>
+        <ion-input [(ngModel)]="usuario.email" type="email" name="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Teléfono</ion-label>
+        <ion-input [(ngModel)]="usuario.cel" type="tel" name="cel" required></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" type="submit" class="boton-outline-custom">Guardar Cambios</ion-button>
+  </form>
+</ion-content>

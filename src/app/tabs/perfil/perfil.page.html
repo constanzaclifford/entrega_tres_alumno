@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="circles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <!-- Información del Usuario -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información de estudiante</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="avatar" alt="Avatar">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ nombre }}</h2>
+          <p>Correo Electrónico: {{ correo }}</p>
+          <p>Teléfono: {{ telefono }}</p>
+          <p>RUT: {{ rut }}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Subir nueva foto</ion-label>
+        <ion-button fill="outline" (click)="selectImage(fileInput)">Seleccionar</ion-button>
+        <input type="file" hidden #fileInput (change)="onFileSelected($event)">
+      </ion-item>      
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Estadísticas de Asistencia -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Estadísticas de Asistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <h3>Total de Asistencias</h3>
+          <p>24</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>Asistencias Perdidas</h3>
+          <p>3</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>Última Asistencia</h3>
+          <p>01/09/2024 - Clase de Matemáticas</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones para Editar Perfil y Cerrar Sesión -->
+  <div class="button-container">
+    <ion-button (click)="editar()" expand="full" fill="solid" class="boton-outline-custom">
+      Editar Perfil
+    </ion-button>
+    <ion-button (click)="cerrar()" expand="full" fill="solid" class="boton-outline-custom">
+      Cerrar Sesión
+    </ion-button>
+  </div>
+</ion-content>

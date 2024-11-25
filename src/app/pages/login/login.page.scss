@@ -1,0 +1,69 @@
+ion-toolbar{
+    --background: #7360df;
+   }
+ion-title{
+  color: #ffffff;
+}
+
+.boton{
+    --background: #ffffff;
+    --background-hover: #db5300;
+    --background-activated: #db5300;
+    --background-focused: #db5300;
+    --color: rgb(0, 0, 0);
+    --border-radius: 15px;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  
+  }
+
+  #foto {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Esto centra la imagen horizontalmente */
+    width: 100%; 
+    height: auto;
+    max-width: 500px; /* Tamaño máximo de la imagen */
+    margin-top: 0; /* Desplazamiento desde la parte superior */
+}   
+
+ion-card-title{
+  color: #7360df;
+}
+ #log{
+    margin-top: 0%;
+    align-items: center;
+}
+
+  #centrar{
+    text-align: center;
+    padding-bottom: 0px;
+    
+  }
+
+  .custom-background {
+    --background: #7360df; /* Cambia el color de fondo solo en esta página */
+  }
+  #inicio{
+    background-color: #5271ff; /* Color del fondo del botón */
+    border-radius: 15px;
+    border: 1px solid #5271ff;
+    color: #ffffff; /* Cambia el color del texto */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+#inicio{
+  --background: #5271ff; /* Color de fondo */
+  --background-activated: #5271ff; /* Color de fondo cuando se activa */
+  --background-focused: #5271ff; /* Color de fondo cuando se enfoca */
+  --background-hover: #5271ff; /* Color de fondo cuando se pasa el ratón */
+  --color: #ffffff; /* Color del texto, si deseas mantenerlo blanco */
+}
+
+/* Estilo para el botón de recuperar contraseña */
+#recuperar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}

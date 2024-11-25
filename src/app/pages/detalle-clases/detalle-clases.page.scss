@@ -1,0 +1,129 @@
+ion-header {
+    background-color: #ffffff; // Color de fondo del header
+    color: #7360df; // Color del texto en el header
+  }
+  
+  ion-toolbar {
+    background-color: #7360df; // Color de fondo del toolbar
+    color: #ffffff; // Color del texto en el toolbar
+    ion-buttons {
+      ion-button {
+        --background: #7360df; // Color de fondo del botón
+        --color: white; // Color del texto del botón
+        border-radius: 12px; // Bordes redondeados
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold; // Negrita
+        text-transform: uppercase; // Texto en mayúsculas
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra suave
+        transition: background-color 0.3s ease-in-out; // Transición suave
+  
+        &:hover {
+          --background: #5a54b1; // Fondo más oscuro en hover
+          cursor: pointer; // Cambiar cursor en hover
+        }
+      }
+    }
+  }
+  
+  ion-title {
+    font-family: 'Poppins', sans-serif; // Fuente personalizada
+    font-weight: 600; // Peso de la fuente
+  }
+  
+  ion-content {
+    background-color: #f2f3d9; // Color de fondo suave
+    position: relative; // Para el posicionamiento de círculos
+  
+    .circles {
+      position: absolute; // Mantiene los círculos en la posición absoluta
+      top: 0;
+      left: 0;
+      width: 100%; // Asegúrate de que ocupa todo el ancho
+      height: 100%; // Asegúrate de que ocupa toda la altura
+      z-index: -1; // Asegúrate de que está detrás del contenido
+      overflow: hidden; // Evita que los círculos salgan del contenedor
+  
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(115, 96, 223, 0.2); 
+        animation: float 10s infinite ease-in-out;
+  
+        &:nth-child(1) {
+          width: 200px;
+          height: 200px;
+          top: 10%;
+          left: 15%;
+        }
+        &:nth-child(2) {
+          width: 300px;
+          height: 300px;
+          top: 50%;
+          left: 80%;
+        }
+        &:nth-child(3) {
+          width: 150px;
+          height: 150px;
+          top: 70%;
+          left: 30%;
+        }
+        &:nth-child(4) {
+          width: 250px;
+          height: 250px;
+          top: 20%;
+          left: 60%;
+        }
+        &:nth-child(5) {
+          width: 100px;
+          height: 100px;
+          top: 80%;
+          left: 20%;
+        }
+      }
+    }
+  
+    @keyframes float {
+      0% {
+        transform: translateY(0px) translateX(0px);
+      }
+      50% {
+        transform: translateY(-50px) translateX(50px);
+      }
+      100% {
+        transform: translateY(0px) translateX(0px);
+      }
+    }
+  
+    ion-card {
+      background-color: white; // Fondo blanco para el card
+      border-radius: 12px; // Bordes redondeados
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra del card
+      margin-bottom: 20px; 
+  
+      ion-card-header {
+        background-color: #ffffff; // Color de fondo del header del card
+        color: #7360df; // Color del texto
+        border-radius: 12px 12px 0 0; // Bordes redondeados solo en la parte superior;
+      }
+  
+      ion-card-title {
+        font-family: 'Lora', serif; 
+        color: #7360df;
+      }
+  
+      ion-card-content {
+        font-family: 'Lora', serif; // Fuente para el contenido
+        color: #030027; // Color del texto
+        line-height: 1.5; // Espaciado entre líneas
+        padding: 16px; // Padding del contenido del card
+      }
+    }
+  
+    .qr-code {
+      margin-top: 30px; // Margen superior para el QR
+      text-align: center; // Centrar el contenido del QR
+  
+    }
+  }
+  

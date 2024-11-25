@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Horario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Mantén un registro de tus asignaturas e ingresa al  material de tus clases.
+    </ion-card-content>
+  </ion-card>
+
+<!-- lugar donde se veran las futuras clases-->
+<ion-list>
+  <ion-item routerLink="/ingles-1">
+    Clase Inglés 1
+  </ion-item>
+  <ion-item routerLink="/clases/ingles1-seccion2">
+    Clase Inglés 1 Sección 2
+  </ion-item>
+  <ion-item routerLink="/clases/ingles1-seccion3">
+    Clase Inglés 1 Sección 3
+  </ion-item>
+</ion-list>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Agenda de Clases</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let clase of agendaClases">
+        <ion-label>
+          <h2>{{ clase.fecha }}</h2>
+          <p>{{ clase.nombre }}</p>
+          <p>Hora: {{ clase.hora }}</p>
+          <p>Ubicación: {{ clase.ubicacion }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
+

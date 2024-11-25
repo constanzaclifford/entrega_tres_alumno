@@ -1,0 +1,67 @@
+<ion-header [translucent]="true" style="--ion-background-color: #7360df;">
+  <ion-toolbar style="--background: #7360df; --color: white;">
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()" style="color: white;">Regresar</ion-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; color: white;">Justificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="background-color: #f7f7f7; padding: 16px;">
+  
+  <!-- Círculos decorativos -->
+  <div class="circulo circulo-1"></div>
+  <div class="circulo circulo-2"></div>
+
+  <!-- Sección de crear justificación -->
+  <ion-card style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h3 id="titulos">Crear nueva justificación</h3>
+    <form (ngSubmit)="enviarJustificacion()" #form="ngForm">
+      <ion-item>
+        <ion-label position="floating">Motivo</ion-label>
+        <ion-input [(ngModel)]="nuevaJustificacion.motivo" name="motivo" required minlength="5"></ion-input>
+      </ion-item>
+      <div *ngIf="form.controls['motivo']?.invalid && (form.controls['motivo']?.touched || form.controls['motivo']?.dirty)">
+        <p *ngIf="form.controls['motivo']?.errors?.['required']" style="color: red;">El motivo es obligatorio.</p>
+        <p *ngIf="form.controls['motivo']?.errors?.['minlength']" style="color: red;">El motivo debe tener al menos 5 caracteres.</p>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input [(ngModel)]="nuevaJustificacion.descripcion" name="descripcion" required minlength="5"></ion-input>
+      </ion-item>
+      <div *ngIf="form.controls['descripcion']?.invalid && (form.controls['descripcion']?.touched || form.controls['descripcion']?.dirty)">
+        <p *ngIf="form.controls['descripcion']?.errors?.['required']" style="color: red;">La descripción es obligatoria.</p>
+        <p *ngIf="form.controls['descripcion']?.errors?.['minlength']" style="color: red;">La descripción debe tener al menos 5 caracteres.</p>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating">Archivo</ion-label>
+        <input type="file" (change)="onFileSelected($event)" style="margin-top: 15px; display: block; width: 100%;" />
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="form.invalid" style="--background: #7360df; --color: white; font-size: 16px; margin-top: 20px; border-radius: 8px;">
+        Enviar Justificación
+      </ion-button>
+    </form>
+  </ion-card>
+
+  <!-- Sección de mis justificaciones -->
+  <ion-card style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h3 id="titulos">Mis justificaciones</h3>
+    <ion-list>
+      <ion-item *ngFor="let justificacion of justificaciones" (click)="buscarJustificacion(justificacion)" style="border-radius: 8px; background-color: white; margin-bottom: 10px; padding: 10px;">
+        <ion-label>
+          <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: bold; color: #707070;">Motivo: {{justificacion.motivo}}</h1>
+          <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; color: #707070;">Descripción: {{justificacion.descripcion}}</h2>
+          <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; color: #707070;">Fecha: {{ justificacion.fecha | date:'dd/MM/yyyy HH:mm:ss' }}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <!-- Mensaje para cuando no hay justificaciones -->
+  <ion-item *ngIf="justificaciones.length === 0">
+    <ion-label>No tienes justificaciones.</ion-label>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,122 @@
+ion-content {
+    background-color: #7360df; /* Fondo blanco */
+    position: relative;
+  }
+  .condense{
+   background-color: #7360df; 
+  }
+  
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que las burbujas estén detrás del contenido */
+    overflow: hidden;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(115, 96, 223, 0.2); /* Morado con opacidad */
+    animation: float 10s infinite ease-in-out;
+  }
+  
+  .circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 15%;
+  }
+  
+  .circle:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 80%;
+  }
+  
+  .circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 30%;
+  }
+  
+  .circle:nth-child(4) {
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    left: 60%;
+  }
+  
+  .circle:nth-child(5) {
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 20%;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-50px) translateX(50px);
+    }
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  
+  /* Estilo del encabezado */
+  ion-header {
+    --ion-background-color: #7360df; /* Color de fondo morado */
+  }
+  
+  ion-toolbar {
+    --background: #7360df;
+    color: #7360df;
+  }
+  
+  ion-title {
+    color: #ffffff;
+  }
+  
+  ion-list {
+    padding: 20px;
+  }
+  
+  ion-item {
+    --background: #f7f7f7;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  ion-label h2 {
+    color: #7360df;
+  }
+  
+  ion-label p {
+    color: #707070;
+  }
+  
+  /* Animación de fade-in */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  ion-item {
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  

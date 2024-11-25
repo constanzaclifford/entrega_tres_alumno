@@ -1,0 +1,115 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "usuario": "Jose e",
+      "email": "Jose@duoc.cl",
+      "cel": "98637254",
+      "password": "12345678",
+      "rut": "12345678-5"
+    },
+    {
+      "id": "2",
+      "usuario": "Cony",
+      "email": "cony@duoc.cl",
+      "cel": "123456789",
+      "password": "87654321",
+      "rut": "23456789-K"
+    },
+    {
+      "id": "6bc5",
+      "usuario": "juan",
+      "email": "juan@duocuc.cl",
+      "cel": "938283232",
+      "password": "12345678",
+      "rut": "21628092k"
+    }
+  ],
+  "clases": [
+    {
+      "id": "1",
+      "imagen": "assets/fotos/matematicas.jpg",
+      "nombre": "Matemáticas Avanzadas",
+      "descripcion": "Una clase sobre cálculo y álgebra.",
+      "asignatura": "Matemáticas",
+      "horario": {
+        "dia": "jueves",
+        "horaInicio": "19:00"
+      },
+      "profesor": "Dr. Martínez"
+    },
+    {
+      "id": "2",
+      "imagen": "assets/fotos/historia.jpg",
+      "nombre": "Historia Contemporánea",
+      "descripcion": "Una revisión de los eventos mundiales más recientes.",
+      "asignatura": "Historia",
+      "horario": {
+        "dia": "viernes",
+        "horaInicio": "14:00"
+      },
+      "profesor": "Sra. López"
+    },
+    {
+      "id": "3",
+      "imagen": "assets/fotos/arquitectura.jpg",
+      "nombre": "Arquitectura",
+      "descripcion": "revision de DAS y ERS",
+      "asignatura": "Arquitectura",
+      "horario": {
+        "dia": "miercoles",
+        "horaInicio": "14:00"
+      },
+      "profesor": "Jorge"
+    },
+    {
+      "id": "4",
+      "imagen": "assets/fotos/base_datos.jpg",
+      "nombre": "PL/SQL",
+      "descripcion": "realizar consultas PL/SQL",
+      "asignatura": "Programacion de base de datos",
+      "horario": {
+        "dia": "lunes",
+        "horaInicio": "14:00"
+      },
+      "profesor": "Mauricio"
+    },
+    {
+      "id": "5",
+      "imagen": "assets/fotos/progra.jpg",
+      "nombre": "Programacion movil",
+      "descripcion": "Programar en ionic",
+      "asignatura": "Programacion",
+      "horario": {
+        "dia": "sabado",
+        "horaInicio": "08:00"
+      },
+      "profesor": "Viviana"
+    }
+  ],
+  "justificaciones": [
+    {
+      "id": "372f",
+      "motivo": "enfermo",
+      "descripcion": "me cai",
+      "usuarioId": "1",
+      "comentario": "hola esta bien\n",
+      "fecha": "2024-10-19T06:41:26.080Z",
+      "archivo": ""
+    }
+  ],
+
+    "lista": [
+    {
+      "nombre": "Juan Pérez",
+      "asistencia": true,
+      "fecha": "2024-11-23"
+    },
+    {
+      "nombre": "María López",
+      "asistencia": false,
+      "fecha": "2024-11-23"
+    }
+  ]
+   
+}

@@ -1,0 +1,68 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+<!--Bienvenida Home++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<ion-content class="ion-padding">
+  <div class="circles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido a Assistance Cognify</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Mantén un registro fácil y eficiente de tus asistencias.
+    </ion-card-content>
+  </ion-card>
+<!--Botones++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+  <div class="button-container">
+    <ion-button (click)="generar()" fill="outline" class="boton-outline-custom" size="big">
+      Ver Clases mis clases
+    </ion-button>
+    <ion-button (click)="justificar()" fill="outline" class="boton-outline-custom" size="big">
+      Justificaciones alumnos
+    </ion-button>
+    <ion-button (click)="scanBarcode()">Escanear Código de Barras</ion-button>
+
+  </div>
+  
+<!--lugar donde se veran las futuras clases+++++++++++++++++++++++++++++++++++++++++-->
+<ion-list>
+  <ion-list-header>
+    <ion-label>clases mas recientes</ion-label>
+  </ion-list-header>
+<!-- Clase de Matemáticas -->
+<ion-item>
+  <ion-icon name="book-outline" slot="start" style="color: #7360df;"></ion-icon>
+  <ion-label>
+    <h2 style="color: #7360df;">Clase de Matemáticas</h2>
+    <p style="color: #707070;">Fecha: 01/09/2024 - Hora: 10:00 AM</p>
+  </ion-label>
+</ion-item>
+</ion-list>
+<!--Carrusel+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+  <div class="swiper-slide">
+    <swiper-container>
+      <swiper-slide *ngFor="let image of images">
+        <img [src]="image" alt="Image Slide" />
+      </swiper-slide>
+    </swiper-container> 
+    <div class="carousel-text">¡informacion relevante!</div>
+  </div>
+  
+
+
+
+</ion-content>

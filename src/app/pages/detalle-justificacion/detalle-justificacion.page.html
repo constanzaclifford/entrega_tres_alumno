@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()">Regresar</ion-button>
+    </ion-buttons>
+    <ion-title>Detalle Justificación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Título: {{ justificacion.motivo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Descripción: {{ justificacion.descripcion }}</p>
+      <p>Fecha: {{ justificacion.fecha }}</p>
+      <p *ngIf="justificacion.comentario">Comentario: {{ justificacion.comentario }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Comentario del profesor -->
+  <ion-item>
+    <ion-label position="floating">Comentario del profesor</ion-label>
+    <ion-textarea 
+      [(ngModel)]="justificacion.comentario" 
+      placeholder="Escribe un comentario..." 
+      [disabled]="comentarioGuardado">
+    </ion-textarea>
+  </ion-item>
+
+  <!-- Botón de guardar -->
+  <ion-button 
+    color="primary" 
+    expand="full" 
+    (click)="guardarComentario()" 
+    [disabled]="comentarioGuardado">
+    Guardar Cambios
+  </ion-button>
+
+  <!-- Botón de eliminar -->
+  <ion-button color="danger" expand="full" (click)="eliminarJustificacion()">Eliminar Justificación</ion-button>
+</ion-content>

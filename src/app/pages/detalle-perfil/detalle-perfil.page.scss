@@ -1,0 +1,49 @@
+ion-content {
+    background-color: #ffffff; /* Color de fondo base */
+    position: relative;
+  }
+  
+  ion-header {
+    --ion-background-color: #7360df; /* Color del encabezado */
+  }
+  
+  ion-toolbar {
+    --background: #7360df; /* Color de fondo de la barra de herramientas */
+    color: #ffffff; /* Color del texto en la barra de herramientas */
+  }
+  
+  ion-title {
+    color: #ffffff; /* Color del título */
+  }
+  
+  /* Estilos para los items del formulario */
+  ion-item {
+    --background: #f7f7f7; /* Fondo gris claro */
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  ion-label {
+    color: #7360df; /* Color morado para las etiquetas */
+  }
+  
+  ion-input {
+    --padding-start: 16px; /* Espaciado interno para el input */
+  }
+  
+  /* Botón de guardar cambios */
+  ion-button.boton-outline-custom {
+    --border-radius: 10px;
+    --background: #7360df; /* Color de fondo del botón */
+    --color: #ffffff; /* Color del texto del botón */
+    --padding: 12px 16px; /* Padding del botón */
+    box-shadow: 0px 4px 8px rgba(115, 96, 223, 0.3); /* Sombra suave */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+  
+  ion-button.boton-outline-custom:hover {
+    --background: #5a4abf; /* Color del botón al pasar el mouse */
+    box-shadow: 0px 6px 12px rgba(115, 96, 223, 0.4); /* Sombra más fuerte */
+  }
+  
